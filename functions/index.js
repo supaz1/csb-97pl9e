@@ -3,16 +3,21 @@ const admin = require('firebase-admin')
 admin.initializeApp()
 
 //DB reference
+CLIENT_ID=llxrl7FxoCHZcY04jJrGeyOhz
+CLIENT_SECRET=VbEYFFtOkPm85xrdBK571Q68aAijWEhodE9mRfsMfk9tRoK1US
+ORGANIZATION=-
+API_SECRET=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
 
-// const dbRef = admin.firestore().doc('tokens/env')
-const dbRef = admin.firestore().doc('.env.local')
+
+// // const dbRef = admin.firestore().doc('tokens/env')
+// const dbRef = admin.firestore().doc('.env.local')
 
 
 //twitter api init
 const TwitterApi = require('twitter-api-v2').default;
 const twitterClient = new TwitterApi({
-  clientId: 'process.env.CLIENT_ID',
-  clientSecret: 'process.env.CLIENT_SECRET',
+  clientId: 'CLIENT_ID',
+  clientSecret: 'CLIENT_SECRET',
 })
 
 const callbackURL = 'http://localhost:5000/gpt3-twitter-bot/us-central1/callback'
@@ -21,8 +26,8 @@ const callbackURL = 'http://localhost:5000/gpt3-twitter-bot/us-central1/callback
 //openai api init
 const { Configuration, OpenAIApi } = require('openai');
 const configuration = new Configuration({
-  organization: 'process.env.ORGANIZATION',
-  apiKey: 'process.env.API_SECRET',
+  organization: 'ORGANIZATION',
+  apiKey: 'API_SECRET',
 });
 const openai = new OpenAIApi(configuration);
 
