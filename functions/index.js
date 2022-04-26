@@ -18,9 +18,12 @@ const twitterClient = new TwitterApi({
   clientSecret: 'CLIENT_SECRET',
 })
 
-const callbackURL = 'http://localhost:3000/callback';
+
+
+// const callbackURL = 'http://localhost:3000/callback';
 // 'http://localhost:5000/gpt3-twitter-bot/us-central1/callback'
 
+const callbackURL = 'https://supaz1.github.io/csb-97pl9e/callback';
 
 //openai api init
 const { Configuration, OpenAIApi } = require('openai');
