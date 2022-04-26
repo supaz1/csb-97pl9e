@@ -40,7 +40,7 @@ exports.auth = functions.https.onRequest((req, res) => {
         { scope: ['tweet.read', 'tweet.write', 'users.read', 'offline.access'] }
       );
       // store verifier
-      await dbRef.set({ codeVerifier, state })
+      // await dbRef.set({ codeVerifier, state })
     
       res.redirect(url)
 })
