@@ -8,7 +8,7 @@ const functions = require("firebase-functions")
 const admin = require('firebase-admin')
 admin.initializeApp()
 
-// // const dbRef = admin.firestore().doc('tokens/env')
+const dbRef = admin.firestore().doc('tokens/env')
 // const dbRef = admin.firestore().doc('.env.local')
 
 //twitter api init
