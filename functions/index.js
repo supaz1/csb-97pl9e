@@ -3,7 +3,9 @@ const admin = require('firebase-admin')
 admin.initializeApp()
 
 //DB reference
-const dbRef = admin.firestore().doc('tokens/env')
+
+// const dbRef = admin.firestore().doc('tokens/env')
+const dbRef = admin.firestore().doc('.env.local')
 
 
 //twitter api init
